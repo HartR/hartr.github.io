@@ -2,7 +2,9 @@ name: Build LaTeX Resume
 on:
   push:
     paths:
-      - 'resume.tex' # Only run when the resume source changes
+      - 'resume.tex'
+      - '.github/workflows/compile-resume.yml' # Trigger when you edit the automation logic
+  workflow_dispatch: # Allows you to manually click "Run workflow" in the UI
 
 permissions:
   contents: write
