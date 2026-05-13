@@ -1,0 +1,115 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+% --- SOPHISTICATED COLOR PALETTE ---
+\definecolor{primaryColor}{RGB}{26, 54, 93}     % Deep Slate Blue (Headers & Name)
+\definecolor{accentColor}{RGB}{43, 108, 176}    % Steel Blue Accent (Lines & Roles)
+\definecolor{textColor}{RGB}{45, 55, 72}       % Charcoal Gray (Body Text)
+
+\color{textColor}
+
+% --- HYPERREF CONFIGURATION ---
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primaryColor,
+    urlcolor=accentColor,
+    pdftitle={Professional Resume},
+    pdfauthor={Senior Software Engineer & Scrum Master}
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+% --- CUSTOM DESIGN MACROS ---
+\newcommand{\resumesection}[1]{
+    \vspace{0.8em}
+    {\large\bfseries\color{primaryColor}{#1}}
+    \vspace{0.2em}
+    {\color{accentColor}\hrule height 1.2pt}
+    \vspace{0.4em}
+}
+
+\newcommand{\roleentry}[4]{
+    \noindent
+    \begin{minipage}[t]{\textwidth}
+        \textbf{\color{primaryColor}\large #1} \hfill {\footnotesize\color{textColor}#2} \\
+        \textit{\color{accentColor}#3} \hfill {\footnotesize\color{textColor}\textit{#4}}
+    \end{minipage}
+    \vspace{0.2em}
+}
+
+\begin{document}
+
+% --- HEADER BANNER ---
+\begin{center}
+    {\Huge \textbf{\color{primaryColor}ALEXANDER MERCER}} \\[0.3em]
+    {\large \textbf{\color{accentColor}Senior Software Engineer \ $\cdot$ \ Certified Scrum Master}} \\[0.5em]
+    {\small 
+    \href{mailto:alex.mercer@email.com}{alex.mercer@email.com} \ $\vert$ \ 
+    (555) 019-2834 \ $\vert$ \ 
+    San Francisco, CA \ $\vert$ \ 
+    \href{https://linkedin.com/in/username}{linkedin.com/in/username} \ $\vert$ \ 
+    \href{https://github.com/username}{github.com/username}
+    }
+\end{center}
+
+% --- PROFESSIONAL SUMMARY ---
+\resumesection{Professional Summary}
+Highly analytical Senior Software Engineer and Certified Scrum Master (CSM) with over 8 years of hands-on experience designing cloud-native distributed architectures and championing high-velocity Agile teams. Expert at aligning technical execution with strategic product goals, facilitating continuous improvement through structured Scrum ceremonies, and driving modern DevOps transitions. Adept at building scalable APIs, managing infrastructure-as-code, and eliminating cross-functional delivery roadblocks.
+
+% --- TECHNICAL MATRIX ---
+\resumesection{Core Competencies}
+\noindent
+\begin{tabular}{@{}p{0.22\textwidth} p{0.78\textwidth}@{}}
+    \textbf{\color{primaryColor}Agile Leadership:} & Scrum Mastery, Sprint Planning, Kanban, Agile Coaching, Velocity Optimization \\
+    \textbf{\color{primaryColor}Backend Engineering:} & Java (Spring Boot), Python (FastAPI), Go, Microservices, RESTful APIs \\
+    \textbf{\color{primaryColor}Cloud \& DevOps:} & AWS (EC2, Lambda, S3), Docker, Kubernetes, CI/CD Pipelines, Terraform \\
+    \textbf{\color{primaryColor}Data \& Tools:} & PostgreSQL, Apache Kafka, NoSQL, Git, GitLab Ultimate, Prometheus, Grafana \\
+\end{tabular}
+
+% --- PROFESSIONAL EXPERIENCE ---
+\resumesection{Professional Experience}
+
+\roleentry{Lead Software Engineer \& Scrum Master}{Jan 2024 -- Present}{InnovateTech Solutions}{San Francisco, CA}
+\begin{itemize}[leftmargin=1.2em, topsep=0pt, itemsep=3pt, parsep=0pt]
+    \item Direct architectural strategy and serve as Scrum Master for an 8-member distributed engineering sprint team, boosting sprint target predictability and delivery velocity by \textbf{22\%}.
+    \item Architected and executed a zero-downtime containerized migration of legacy enterprise systems into a \textbf{Kubernetes/AWS} multi-region infrastructure, upgrading application reliability metrics to \textbf{99.95\%}.
+    \item Structured operational workflows and team transitions over to \textbf{GitLab Ultimate}, generating centralized issue templates, CI/CD pipeline integrations, and granular permission matrices to automate engineering compliance.
+    \item Facilitate critical ceremonies (Daily Standups, Backlog Grooming, Sprint Reviews, Retrospectives) ensuring explicit alignment between stakeholder product metrics and engineering team capacity.
+\end{itemize}
+
+\vspace{0.4em}
+
+\roleentry{Senior Software Engineer}{Aug 2021 -- Dec 2023}{Apex Digital Systems}{Austin, TX}
+\begin{itemize}[leftmargin=1.2em, topsep=0pt, itemsep=3pt, parsep=0pt]
+    \item Developed a high-throughput event streaming data infrastructure using \textbf{Apache Kafka and Python}, successfully ingesting and normalizing over \textbf{10M daily events} across real-time pipelines.
+    \item Designed and provisioned modular, production-ready cloud environments via \textbf{Terraform}, eliminating manual intervention and shortening environment spin-up lifecycles from 3 business days down to minutes.
+    \item Acted as primary technical liaison to cross-functional business stakeholders, resolving design ambiguities during technical grooming and translation of user stories.
+    \item Provided direct career advocacy, technical mentorship, and code review quality control for 5 mid-level and junior software engineers.
+\end{itemize}
+
+\vspace{0.4em}
+
+\roleentry{Software Engineer}{Jun 2018 -- Jul 2021}{CoreLogic Apps}{Seattle, WA}
+\begin{itemize}[leftmargin=1.2em, topsep=0pt, itemsep=3pt, parsep=0pt]
+    \item Built and deployed secure, optimized REST APIs leveraging \textbf{Java and Spring Boot} for high-traffic financial tracking services supporting 500k+ active accounts.
+    \item Served as rotational Scrum Master during agile maturity transitions, introducing metrics-driven feedback loops to standard sprint retrospectives.
+\end{itemize}
+
+% --- CERTIFICATIONS ---
+\resumesection{Certifications}
+\noindent
+\begin{tabular}{@{}p{0.5\textwidth} p{0.5\textwidth}@{}}
+    \textbf{Certified ScrumMaster (CSM)} -- Scrum Alliance & \textbf{Professional Scrum Master I (PSM I)} -- Scrum.org \\
+    \textbf{AWS Certified Solutions Architect -- Professional} & \textbf{GitLab Certified Associate} \\
+\end{tabular}
+
+% --- EDUCATION ---
+\resumesection{Education}
+\roleentry{M.S. in Computer Science}{Expected Dec 2026}{State University Graduate School}{Online / Part-Time}
+\roleentry{B.S. in Computer Science}{May 2018}{Tech Engineering University}{Austin, TX}
+
+\end{document}

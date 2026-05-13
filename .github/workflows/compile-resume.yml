@@ -1,0 +1,28 @@
+name: Build LaTeX Resume
+on:
+  push:
+    paths:
+      - 'resume.tex' # Only run when the resume source changes
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: resume.tex
+
+      - name: Move PDF to assets
+        run: |
+          mkdir -p assets
+          mv resume.pdf assets/cv.pdf
+
+      - name: Commit and Push PDF
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Automated update of CV PDF"
+          file_pattern: 'assets/cv.pdf'
