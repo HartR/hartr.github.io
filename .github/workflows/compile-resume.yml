@@ -4,6 +4,9 @@ on:
     paths:
       - 'resume.tex' # Only run when the resume source changes
 
+permissions:
+  contents: write
+
 jobs:
   build_latex:
     runs-on: ubuntu-latest
