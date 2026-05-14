@@ -92,8 +92,16 @@ a:hover { color: var(--accent); }
   backdrop-filter: blur(18px);
 }
 
-.hero-copy { padding: clamp(32px, 6vw, 72px); }
-.hero h1, .page-header h1, .post-hero h1, .not-found h1 {
+.hero-copy { padding: clamp(28px, 5vw, 54px); }
+
+.hero h1 {
+  margin: 0;
+  letter-spacing: -0.045em;
+  line-height: 1;
+  font-size: clamp(2.6rem, 5.5vw, 4.8rem);
+}
+
+.page-header h1, .post-hero h1, .not-found h1 {
   margin: 0;
   letter-spacing: -0.055em;
   line-height: 0.96;
