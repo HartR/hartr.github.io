@@ -1,3 +1,34 @@
-title: Hart's Personal Site
-description: This is my new social media
-theme: jekyll-theme-slate
+title: Hart's Notebook
+description: Practical notes on software, infrastructure, automation, and projects.
+url: "https://hartr.github.io"
+baseurl: ""
+lang: en
+
+author:
+  name: Hart
+  email: ""
+  github: HartR
+  tagline: Software, systems, and useful tools.
+
+permalink: /:categories/:year/:month/:day/:title/
+
+collections:
+  posts:
+    output: true
+
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - resume.tex
+  - vendor
+  - .bundle
+  - .sass-cache
+  - .jekyll-cache
