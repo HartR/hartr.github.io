@@ -1,19 +1,15 @@
-name: Build LaTeX Resume
+name: Manual PDF Build
 on:
-  push:
-    paths:
-      - 'resume.tex'
-      - '.github/workflows/compile-resume.yml' # Trigger when you edit the automation logic
-  workflow_dispatch: # Allows you to manually click "Run workflow" in the UI
+  workflow_dispatch: # Only runs on click
 
 permissions:
-  contents: write
+  contents: write # Required to push the PDF back to your repo
 
 jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Git repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Compile LaTeX document
@@ -29,5 +25,5 @@ jobs:
       - name: Commit and Push PDF
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Automated update of CV PDF"
+          commit_message: "Automated CV update"
           file_pattern: 'assets/cv.pdf'
