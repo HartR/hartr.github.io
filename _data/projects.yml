@@ -1,0 +1,7 @@
+- name: "Ethereum Node Infrastructure"
+  description: "Maintaining a Rocket Pool node on Ubuntu."
+  tag: "Blockchain"
+  link: "https://github.com/HartR/..."
+- name: "3D Printing & Design"
+  description: "Functional prints using the Elegoo Centauri Carbon."
+  tag: "Hardware"
