@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Photo Album
-description: Add photos to assets/photos/ and they will appear here automatically.
 permalink: /photo-album/
 ---
 

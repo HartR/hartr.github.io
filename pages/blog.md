@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Blog
 description: Occasional notes and short writing.
 permalink: /blog/
 ---
