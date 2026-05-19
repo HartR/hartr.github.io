@@ -91,10 +91,27 @@ a:hover { text-decoration-thickness: 0.14em; }
   border-top: 1px solid var(--line);
 }
 
-.latest-post .post-preview:first-of-type,
+.post-preview:first-of-type,
 .post-list .post-row:first-child {
   border-top: 0;
   padding-top: 0.25rem;
+}
+
+.latest-post {
+  margin-top: 2rem;
+  padding: 1.25rem 1.75rem;
+  border: 1px solid #d0d0d0;
+  border-radius: 999px;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.latest-post h2 {
+  margin-top: 0;
+}
+
+.latest-post p:last-child {
+  margin-bottom: 0;
 }
 
 .post-preview h3,
