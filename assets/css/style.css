@@ -266,3 +266,6 @@ a:hover { color: var(--accent); }
   .project-grid, .project-grid.wide { grid-template-columns: 1fr; }
   .hero { padding-top: 28px; }
 }
+
+.hero.single-column { grid-template-columns: 1fr; }
+.hero.single-column .hero-copy { max-width: 920px; }

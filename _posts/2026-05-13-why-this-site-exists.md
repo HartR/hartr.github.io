@@ -1,27 +1,27 @@
 ---
 layout: post
-title: "Why I’m Keeping a Technical Notebook"
-description: "A short note on turning scattered project notes into durable public writing."
+title: "Why This Site Exists"
+description: "A short note on keeping a simple personal site for useful writing and resume links."
 date: 2026-05-13
-categories: [Meta]
-tags: [writing, projects]
+categories: [Notes]
+tags: [writing]
 reading_time: "2 min read"
 ---
 
-Most useful engineering lessons start as messy notes: a command that finally worked, a debugging path that went nowhere, a design constraint that mattered more than expected.
+Most useful engineering lessons start as messy notes: a command that finally worked, a debugging path that went nowhere, or a constraint that mattered more than expected.
 
-This site is where those notes become something more durable.
+This site is a small place to keep those notes when they are worth making public. The goal is not to maintain a large portfolio or a constant publishing schedule. It is just to keep a clean, durable home for occasional writing and resume links.
 
 ## The format
 
-I want posts here to be practical. A good post should answer three questions:
+A good note should answer three questions:
 
 1. What was I trying to do?
 2. What actually happened?
 3. What would I repeat or avoid next time?
 
-That framing works for server maintenance, personal infrastructure, 3D printing, automation scripts, and the small tools that accumulate around a technical life.
+That framing works for software, systems, automation, debugging, and the small tools that accumulate around technical work.
 
 ## The bar
 
-Not every post needs to be a definitive guide. Some will be field notes. Some will be checklists. Some will be project logs. The common thread is clarity: enough context, enough detail, and enough honesty to be useful later.
+Not every post needs to be a definitive guide. Some notes can simply capture enough context, detail, and honesty to be useful later.

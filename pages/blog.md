@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Blog
-description: Notes, tutorials, and field reports from software and systems work.
+description: Occasional notes and short technical writing.
 eyebrow: Writing
 permalink: /blog/
 ---

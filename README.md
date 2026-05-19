@@ -1,6 +1,6 @@
 # Hart's Notebook
 
-A custom Jekyll blog for GitHub Pages.
+A small custom Jekyll site for GitHub Pages with a homepage, one blog post, and resume links.
 
 ## Local development
 
@@ -20,6 +20,7 @@ Push changes to the `main` branch of `HartR/hartr.github.io`. GitHub Pages will 
 ## Editing
 
 - Blog posts live in `_posts/` and use the filename format `YYYY-MM-DD-title.md`.
-- Projects are listed in `_data/projects.yml`.
-- Main pages live in `pages/`.
+- The homepage lives in `index.md`.
+- The blog archive lives in `pages/blog.md`.
+- Resume source lives in `resume.tex`; the compiled PDF is `assets/cv.pdf`.
 - Global styles live in `assets/css/style.css`.
