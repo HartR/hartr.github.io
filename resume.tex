@@ -1,115 +1,183 @@
 \documentclass[10pt,letterpaper]{article}
-\usepackage[margin=0.5in]{geometry}
+
+\usepackage[margin=0.55in]{geometry}
+\usepackage{titlesec}
 \usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
 \usepackage{xcolor}
-\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
 
-% --- SOPHISTICATED COLOR PALETTE ---
-\definecolor{primaryColor}{RGB}{26, 54, 93}     % Deep Slate Blue (Headers & Name)
-\definecolor{accentColor}{RGB}{43, 108, 176}    % Steel Blue Accent (Lines & Roles)
-\definecolor{textColor}{RGB}{45, 55, 72}       % Charcoal Gray (Body Text)
-
-\color{textColor}
-
-% --- HYPERREF CONFIGURATION ---
-\hypersetup{
-    colorlinks=true,
-    linkcolor=primaryColor,
-    urlcolor=accentColor,
-    pdftitle={Professional Resume},
-    pdfauthor={Senior Software Engineer & Scrum Master}
-}
+\definecolor{accent}{HTML}{0B3D91}
+\definecolor{textgray}{HTML}{333333}
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{0pt}
+\renewcommand{\familydefault}{\sfdefault}
 
-% --- CUSTOM DESIGN MACROS ---
-\newcommand{\resumesection}[1]{
-    \vspace{0.8em}
-    {\large\bfseries\color{primaryColor}{#1}}
-    \vspace{0.2em}
-    {\color{accentColor}\hrule height 1.2pt}
-    \vspace{0.4em}
+\titleformat{\section}
+  {\large\bfseries\color{accent}}
+  {}
+  {0em}
+  {}
+  [\titlerule]
+
+\titlespacing{\section}{0pt}{8pt}{5pt}
+
+\setlist[itemize]{
+  leftmargin=1.2em,
+  itemsep=2pt,
+  topsep=2pt,
+  parsep=0pt
 }
 
-\newcommand{\roleentry}[4]{
-    \noindent
-    \begin{minipage}[t]{\textwidth}
-        \textbf{\color{primaryColor}\large #1} \hfill {\footnotesize\color{textColor}#2} \\
-        \textit{\color{accentColor}#3} \hfill {\footnotesize\color{textColor}\textit{#4}}
-    \end{minipage}
-    \vspace{0.2em}
+\newcommand{\resumeHeader}[5]{
+  {\Huge \textbf{#1}} \\[3pt]
+  {\large \color{accent} #2} \\[7pt]
+  \small
+  \faMapMarker* \ #3 \quad
+  \faPhone \ #4 \quad
+  \faEnvelope \ \href{mailto:#5}{#5}
+}
+
+\newcommand{\resumeLinks}[2]{
+  \small
+  \faLinkedin \ \href{#1}{linkedin.com/in/hartcranerussell}
+  \quad
+  \faGlobe \ \href{#2}{hartr.github.io}
+}
+
+\newcommand{\job}[4]{
+  \textbf{#1} \hfill \textbf{#2} \\
+  \textit{#3} \hfill \textit{#4}
 }
 
 \begin{document}
+\color{textgray}
 
-% --- HEADER BANNER ---
-\begin{center}
-    {\Huge \textbf{\color{primaryColor}ALEXANDER MERCER}} \\[0.3em]
-    {\large \textbf{\color{accentColor}Senior Software Engineer \ $\cdot$ \ Certified Scrum Master}} \\[0.5em]
-    {\small 
-    \href{mailto:alex.mercer@email.com}{alex.mercer@email.com} \ $\vert$ \ 
-    (555) 019-2834 \ $\vert$ \ 
-    San Francisco, CA \ $\vert$ \ 
-    \href{https://linkedin.com/in/username}{linkedin.com/in/username} \ $\vert$ \ 
-    \href{https://github.com/username}{github.com/username}
-    }
-\end{center}
+\resumeHeader
+  {Hart Russell}
+  {Senior Software Engineer \;|\; M.S. Computer Science}
+  {San Diego, CA}
+  {760-216-1183}
+  {hartcranerussell@gmail.com}
 
-% --- PROFESSIONAL SUMMARY ---
-\resumesection{Professional Summary}
-Highly analytical Senior Software Engineer and Certified Scrum Master (CSM) with over 8 years of hands-on experience designing cloud-native distributed architectures and championing high-velocity Agile teams. Expert at aligning technical execution with strategic product goals, facilitating continuous improvement through structured Scrum ceremonies, and driving modern DevOps transitions. Adept at building scalable APIs, managing infrastructure-as-code, and eliminating cross-functional delivery roadblocks.
+\vspace{3pt}
+\resumeLinks
+  {https://www.linkedin.com/in/hartcranerussell}
+  {https://hartr.github.io/}
 
-% --- TECHNICAL MATRIX ---
-\resumesection{Core Competencies}
-\noindent
-\begin{tabular}{@{}p{0.22\textwidth} p{0.78\textwidth}@{}}
-    \textbf{\color{primaryColor}Agile Leadership:} & Scrum Mastery, Sprint Planning, Kanban, Agile Coaching, Velocity Optimization \\
-    \textbf{\color{primaryColor}Backend Engineering:} & Java (Spring Boot), Python (FastAPI), Go, Microservices, RESTful APIs \\
-    \textbf{\color{primaryColor}Cloud \& DevOps:} & AWS (EC2, Lambda, S3), Docker, Kubernetes, CI/CD Pipelines, Terraform \\
-    \textbf{\color{primaryColor}Data \& Tools:} & PostgreSQL, Apache Kafka, NoSQL, Git, GitLab Ultimate, Prometheus, Grafana \\
-\end{tabular}
+\vspace{7pt}
 
-% --- PROFESSIONAL EXPERIENCE ---
-\resumesection{Professional Experience}
+\section*{Professional Summary}
+Senior Software Engineer with 10+ years of experience building mission-focused defense, naval, mobile, backend, and distributed software systems. Strong background in Java, C++, Python, CI/CD, containerized development, Agile/Scrum execution, and defense program delivery across ADNS, SSDS, GPNTS, and related naval systems. Trusted technical contributor retained through contract transitions as key personnel, with demonstrated ability to translate customer requirements into reliable, maintainable, production-ready software.
 
-\roleentry{Lead Software Engineer \& Scrum Master}{Jan 2024 -- Present}{InnovateTech Solutions}{San Francisco, CA}
-\begin{itemize}[leftmargin=1.2em, topsep=0pt, itemsep=3pt, parsep=0pt]
-    \item Direct architectural strategy and serve as Scrum Master for an 8-member distributed engineering sprint team, boosting sprint target predictability and delivery velocity by \textbf{22\%}.
-    \item Architected and executed a zero-downtime containerized migration of legacy enterprise systems into a \textbf{Kubernetes/AWS} multi-region infrastructure, upgrading application reliability metrics to \textbf{99.95\%}.
-    \item Structured operational workflows and team transitions over to \textbf{GitLab Ultimate}, generating centralized issue templates, CI/CD pipeline integrations, and granular permission matrices to automate engineering compliance.
-    \item Facilitate critical ceremonies (Daily Standups, Backlog Grooming, Sprint Reviews, Retrospectives) ensuring explicit alignment between stakeholder product metrics and engineering team capacity.
+\section*{Core Skills}
+\begin{tabularx}{\textwidth}{@{} l X @{}}
+\textbf{Languages} & Java, C++, Python, C\#, F\#, Tcl, Scheme \\
+\textbf{Frameworks / Platforms} & Spring Boot, Java Swing, Xamarin, MvvmCross, DDS, Appium, NUnit, Google Test \\
+\textbf{DevOps / Tooling} & Git, GitLab, Bitbucket, Jenkins, CI/CD, Docker, Podman, Jira, Vagrant \\
+\textbf{Domains} & Naval defense systems, distributed systems, mission software, HMI/GUI, mobile apps, embedded/telephony software \\
+\textbf{Leadership} & Scrum Master, sprint planning, backlog refinement, task breakdown, recruiting, process improvement \\
+\end{tabularx}
+
+\section*{Professional Experience}
+
+\job
+  {Trabus Technologies}
+  {Mar 2024 -- Present}
+  {Senior Software Engineer \& Scrum Master}
+  {San Diego, CA}
+
+\begin{itemize}
+  \item Lead sprint planning, backlog refinement, and engineering task breakdown in Jira, translating customer requirements into actionable development work.
+  \item Serve as Scrum Master by facilitating Agile ceremonies, tracking progress, removing blockers, and improving delivery predictability across development cycles.
+  \item Design, develop, and maintain ADNS OSS software using Java, Spring Boot, Python, and Podman, emphasizing reliability, maintainability, and mission alignment.
+  \item Support modern software delivery using GitLab, Jenkins, and CI/CD pipelines for streamlined builds, testing, integration, and deployment.
+  \item Retained through contract transition from Frontier Technology after being identified as key personnel during recompete, preserving program knowledge and mission continuity.
 \end{itemize}
 
-\vspace{0.4em}
+\job
+  {Frontier Technology}
+  {Jun 2022 -- Mar 2024}
+  {Senior Software Engineer}
+  {San Diego, CA}
 
-\roleentry{Senior Software Engineer}{Aug 2021 -- Dec 2023}{Apex Digital Systems}{Austin, TX}
-\begin{itemize}[leftmargin=1.2em, topsep=0pt, itemsep=3pt, parsep=0pt]
-    \item Developed a high-throughput event streaming data infrastructure using \textbf{Apache Kafka and Python}, successfully ingesting and normalizing over \textbf{10M daily events} across real-time pipelines.
-    \item Designed and provisioned modular, production-ready cloud environments via \textbf{Terraform}, eliminating manual intervention and shortening environment spin-up lifecycles from 3 business days down to minutes.
-    \item Acted as primary technical liaison to cross-functional business stakeholders, resolving design ambiguities during technical grooming and translation of user stories.
-    \item Provided direct career advocacy, technical mentorship, and code review quality control for 5 mid-level and junior software engineers.
+\begin{itemize}
+  \item Designed, developed, and maintained ADNS OSS software using Java for mission-focused naval software environments.
+  \item Built reliable and maintainable software components while supporting program integration and delivery objectives.
+  \item Used Git, Bitbucket, Jenkins, and CI/CD pipelines to improve software build, test, integration, and deployment workflows.
+  \item Provided continuity of technical expertise and program knowledge through a successful contract transition.
 \end{itemize}
 
-\vspace{0.4em}
+\job
+  {ASRC Federal}
+  {Apr 2020 -- Jun 2022}
+  {Senior Principal Software Engineer}
+  {San Diego County, CA}
 
-\roleentry{Software Engineer}{Jun 2018 -- Jul 2021}{CoreLogic Apps}{Seattle, WA}
-\begin{itemize}[leftmargin=1.2em, topsep=0pt, itemsep=3pt, parsep=0pt]
-    \item Built and deployed secure, optimized REST APIs leveraging \textbf{Java and Spring Boot} for high-traffic financial tracking services supporting 500k+ active accounts.
-    \item Served as rotational Scrum Master during agile maturity transitions, introducing metrics-driven feedback loops to standard sprint retrospectives.
+\begin{itemize}
+  \item Supported Lockheed Martin's SSDS program, contributing to operator-facing GUI development and backend software functionality.
+  \item Designed, implemented, and maintained mission-focused software components using Java and C++ across user interface workflows, system logic, and integration capabilities.
+  \item Worked with Docker, Jenkins, DDS, Jira, Git, Bitbucket, and Python to support automation, configuration management, and continuous integration.
+  \item Converted from contractor to full-time employee based on strong performance, technical contribution, and team fit.
 \end{itemize}
 
-% --- CERTIFICATIONS ---
-\resumesection{Certifications}
-\noindent
-\begin{tabular}{@{}p{0.5\textwidth} p{0.5\textwidth}@{}}
-    \textbf{Certified ScrumMaster (CSM)} -- Scrum Alliance & \textbf{Professional Scrum Master I (PSM I)} -- Scrum.org \\
-    \textbf{AWS Certified Solutions Architect -- Professional} & \textbf{GitLab Certified Associate} \\
-\end{tabular}
+\job
+  {KAB Laboratories, Inc.}
+  {Nov 2016 -- Apr 2020}
+  {Software Engineer}
+  {San Diego County, CA}
 
-% --- EDUCATION ---
-\resumesection{Education}
-\roleentry{M.S. in Computer Science}{Expected Dec 2026}{State University Graduate School}{Online / Part-Time}
-\roleentry{B.S. in Computer Science}{May 2018}{Tech Engineering University}{Austin, TX}
+\begin{itemize}
+  \item Supported Raytheon defense programs, contributing to mission-critical naval software across GPNTS and SSDS.
+  \item Developed C++ software for GPS, precision timing, and distributed system challenges in naval shipboard environments.
+  \item Supported development, testing, and integration workflows using Python, Jenkins, Google Test, C\#, and DDS.
+  \item Developed and refactored operator-facing SSDS HMI screens for multiple naval ship configurations using Java Swing, Tcl, and C++.
+  \item Helped KAB achieve CMMI Level 3 certification through standards compliance reviews and process improvement initiatives.
+  \item Served as lead interviewer for SSDS recruiting, helping evaluate and grow the engineering team.
+\end{itemize}
+
+\job
+  {Digium}
+  {Aug 2014 -- Mar 2016}
+  {Software Engineer}
+  {San Diego County, CA}
+
+\begin{itemize}
+  \item Developed Android, iOS, backend integration, automated testing, and desk phone software for the Switchvox communications platform.
+  \item Built mobile features from UX specifications using C\#, F\#, and Xamarin Studio, translating product requirements into reliable user-facing functionality.
+  \item Integrated mobile clients with event-driven F\# backend services for real-time communication workflows.
+  \item Designed and maintained automated mobile testing using NUnit, Appium, Jenkins, and Vagrant.
+  \item Maintained C++ desk phone software and created a C++ WebSocket client for streaming events from a real-time API.
+\end{itemize}
+
+\section*{Selected Earlier Experience}
+
+\job
+  {Seamgen}
+  {May 2016 -- Nov 2016}
+  {Xamarin Software Engineer}
+  {San Diego, CA}
+
+\begin{itemize}
+  \item Developed Xamarin Android applications using C\#, Xamarin Studio, and MvvmCross across consumer and utility-focused mobile apps.
+  \item Served as sole developer for a receipt-scanning application and co-developed a social image-sharing and messaging app.
+\end{itemize}
+
+\section*{Education}
+
+\textbf{San Diego State University} \hfill \textbf{Expected May 2026} \\
+M.S., Computer Science
+
+\vspace{3pt}
+
+\textbf{Grinnell College} \hfill \textbf{2014} \\
+B.A., Computer Science
+
+\section*{Certification}
+
+CompTIA Linux+ Powered by LPI
 
 \end{document}
