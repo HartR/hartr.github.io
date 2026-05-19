@@ -4,9 +4,7 @@ title: Home
 ---
 
 <section class="home-intro">
-  <h1>{{ site.title }}</h1>
-  <p class="subtitle">{{ site.subtitle }}</p>
-  <p class="about-blurb">I’m Hart. This is a small personal site for occasional notes, a simple photo album, and my CV.</p>
+  <p class="about-blurb">Hi, I’m Hart. This is my only social media.</p>
 </section>
 
 <section class="latest-post">
