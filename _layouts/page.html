@@ -1,13 +1,10 @@
 ---
 layout: default
 ---
-<article class="page-card">
+<article class="page">
   <header class="page-header">
-    <p class="eyebrow">{{ page.eyebrow | default: 'Notebook' }}</p>
     <h1>{{ page.title }}</h1>
-    {% if page.description %}<p class="lead">{{ page.description }}</p>{% endif %}
+    {% if page.description %}<p>{{ page.description }}</p>{% endif %}
   </header>
-  <div class="prose">
-    {{ content }}
-  </div>
+  {{ content }}
 </article>

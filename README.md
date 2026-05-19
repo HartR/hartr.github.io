@@ -1,26 +1,36 @@
 # Hart's Notebook
 
-A small custom Jekyll site for GitHub Pages with a homepage, one blog post, and resume links.
+Minimal GitHub Pages site with a home page, blog, photo album, and CV link.
 
-## Local development
+## Add a blog post
 
-Install Ruby and Bundler, then run:
+Create a Markdown file in `_posts/` named like:
 
-```bash
-bundle install
-bundle exec jekyll serve
+```text
+YYYY-MM-DD-title.md
 ```
 
-Open `http://localhost:4000`.
+Use this front matter:
 
-## Publishing
+```yaml
+---
+layout: post
+title: "Post Title"
+description: "One-sentence summary."
+date: YYYY-MM-DD
+---
+```
 
-Push changes to the `main` branch of `HartR/hartr.github.io`. GitHub Pages will build and publish the site automatically.
+## Add photos
 
-## Editing
+Upload images to:
 
-- Blog posts live in `_posts/` and use the filename format `YYYY-MM-DD-title.md`.
-- The homepage lives in `index.md`.
-- The blog archive lives in `pages/blog.md`.
-- Resume source lives in `resume.tex`; the compiled PDF is `assets/cv.pdf`.
-- Global styles live in `assets/css/style.css`.
+```text
+assets/photos/
+```
+
+Supported extensions are `.jpg`, `.jpeg`, `.png`, `.gif`, and `.webp`. The Photo Album page lists them automatically after GitHub Pages rebuilds the site.
+
+## CV
+
+The public CV link points to `assets/cv.pdf`. The source is `resume.tex`, and the existing GitHub Action can rebuild the PDF manually.
